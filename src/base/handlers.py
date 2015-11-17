@@ -229,7 +229,7 @@ class BaseHandler(webapp2.RequestHandler):
       use the factory below. This has the advantage of having different settings
       for different applications and not set here at the handler level.
     """
-    extensions = ['jinja2.ext.with_']
+    extensions = ['jinja2.ext.with_', 'jinja2.ext.autoescape']
     return {
       'environment_args': {
         'autoescape': True,
